@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Realtime Form Validation</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/form.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<form class="registration" id="registration" action="home.html">
+			<h1>Signin Form</h1>
+
+			<label for="username">
+				<span>Username</span>
+
+				<input type="text" id="username" minlength="3" required>
+
+			</label>
+
+           
+
+			<label for="password">
+				<span>Enter Password</span>
+				<input type="password" id="password" maxlength="100" minlength="8" required>
+			</label>
+
+
+			<br>
+
+			<input type="submit" value="Login">
+
+		</form>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
