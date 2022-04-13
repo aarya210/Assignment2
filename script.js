@@ -103,15 +103,16 @@ var phnoValidityChecks = [
 		isInvalid: function(input) {
 			return input.value.length < 9;
 		},
-		invalidityMessage: 'This input needs to be at least 3 characters',
+		invalidityMessage: 'This input needs to be at least 9 characters',
 		element: document.querySelector('label[for="username"] .input-requirements li:nth-child(1)')
 	},
 	{
 		isInvalid: function(input) {
-			var illegalCharacters = input.value.match(/[^a-zA-Z0-9]/g);
-			return illegalCharacters ? true : false;
+			
+			var phnformat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
+			return input.value.match(phnformat) ? true : false;
 		},
-		invalidityMessage: 'Only letters and numbers are allowed',
+		invalidityMessage: 'Valid Phn No formats accepted: XXX-XXX-XXX or XXX.XXX.XXX or XXX XXX XXX',
 		element: document.querySelector('label[for="username"] .input-requirements li:nth-child(2)')
 	}
 ];
